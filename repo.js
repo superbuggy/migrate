@@ -14,6 +14,14 @@ const tryPush = repo => {
   tryMe(execThunk(`cd ${repo} && git push -u upstream master`))
 }
 
+function tryPrivatize (repo) {
+  axios
+  .patch(`https://git.generalassemb.ly/api/v3/repos/${ORG_NAME}/${repo}?access_token=${process.env.token}`, {private: true})
+  .then(res => console.log(`${res.data.url} updated to private`))
+  .catch(error => console.error(error.response.data))
+}
+
+repos.forEach(tryPrivatize)
 // links.forEach(tryClone)
 // repos.forEach(tryPost)
 // repos.forEach(tryPush)
