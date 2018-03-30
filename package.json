@@ -1,0 +1,16 @@
+{
+  "name": "react-redux-curriculum",
+  "version": "1.0.0",
+  "description": "> from `ga-wdi-exercises` and `ga-wdi-lessons`",
+  "main": "repo.js",
+  "dependencies": {
+    "axios": "^0.18.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
